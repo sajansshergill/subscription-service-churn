@@ -28,30 +28,37 @@ Tables:
 customer_churn_dashboard_project/
 │
 ├── data/
+
 │   ├── raw/
 │   │   └── Subscription_Service_Churn_Dataset.csv
 │   └── processed/
 │       └── churn_predictions.csv
 │
+
 ├── notebooks/
 │   └── churn_model_dev.ipynb
 │
+
 ├── scripts/
 │   ├── data_preprocessing.py
 │   ├── model_training.py
 │   ├── evaluate_model.py
 │   └── export_dashboard_data.py
 │
+
 ├── reports/
 │   ├── churn_model_report.pdf
 │   └── feature_importance_chart.png
 │
+
 ├── dashboard/
 │   └── churn_dashboard.pbix  # or .twbx for Tableau
 │
+
 ├── utils/
 │   └── helpers.py
 │
+
 ├── README.md
 └── requirements.txt
 
