@@ -28,37 +28,38 @@ Tables:
 customer_churn_dashboard_project/
 │
 ├── data/
-
 │   ├── raw/
+
 │   │   └── Subscription_Service_Churn_Dataset.csv
-│   └── processed/
-│       └── churn_predictions.csv
-│
 
-├── notebooks/
-│   └── churn_model_dev.ipynb
-│
+│   ├── processed/
+│   │   ├── preprocessed_churn_data.csv
+│   │   ├── churn_predictions.csv
+│   │   └── sql_flattened_features.csv
 
+│   └── subscription_churn.db                   # SQLite database
+│
 ├── scripts/
-│   ├── data_preprocessing.py
-│   ├── model_training.py
-│   ├── evaluate_model.py
-│   └── export_dashboard_data.py
+│   ├── create_sqlite_db.py                     # Step 2: Database setup from CSV
+│   ├── extract_features_sql.py                 # SQL JOIN to flatten features
+│   ├── data_preprocessing.py                   # Cleaning, encoding
+│   ├── model_training.py                       # Train Random Forest model
+│   ├── evaluate_model.py                       # Classification report + feature importances
+│   └── export_dashboard_data.py                # Export dashboard-ready CSV
 │
-
+├── notebooks/
+│   └── churn_model_dev.ipynb                   # Optional: Experimental work
+│
 ├── reports/
-│   ├── churn_model_report.pdf
-│   └── feature_importance_chart.png
+│   ├── churn_model_report.txt                  # Metrics and evaluation
+│   └── feature_importance_chart.png            # Feature impact visual
 │
-
 ├── dashboard/
-│   └── churn_dashboard.pbix  # or .twbx for Tableau
+│   └── churn_dashboard.pbix                    # Power BI file (or .twbx for Tableau)
 │
-
 ├── utils/
-│   └── helpers.py
+│   └── helpers.py                              # (Optional) shared functions/utilities
 │
-
 ├── README.md
 └── requirements.txt
 
