@@ -29,14 +29,11 @@ customer_churn_dashboard_project/
 │
 ├── data/
 │   ├── raw/
-
 │   │   └── Subscription_Service_Churn_Dataset.csv
-
 │   ├── processed/
 │   │   ├── preprocessed_churn_data.csv
 │   │   ├── churn_predictions.csv
 │   │   └── sql_flattened_features.csv
-
 │   └── subscription_churn.db                   # SQLite database
 │
 ├── scripts/
